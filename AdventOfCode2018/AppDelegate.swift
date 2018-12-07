@@ -14,7 +14,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+
+        printRuntimes = true
+        
+        Day1().showSolutions()
+        Day2().showSolutions()
+        Day3().showSolutions()
+        Day4().showSolutions()
+        Day5().showSolutions()
+        Day6().showSolutions()
+        Day7().showSolutions()
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

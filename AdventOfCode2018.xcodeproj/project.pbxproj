@@ -11,6 +11,22 @@
 		27A57FCC21BA6C31000FED7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FCB21BA6C31000FED7D /* ViewController.swift */; };
 		27A57FCE21BA6C32000FED7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FCD21BA6C32000FED7D /* Assets.xcassets */; };
 		27A57FD121BA6C32000FED7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FCF21BA6C32000FED7D /* Main.storyboard */; };
+		27A57FDB21BA6CD9000FED7D /* 1.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FDA21BA6CD9000FED7D /* 1.in */; };
+		27A57FDD21BA6CEB000FED7D /* 2.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FDC21BA6CEB000FED7D /* 2.in */; };
+		27A57FDF21BA6CF9000FED7D /* 3.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FDE21BA6CF9000FED7D /* 3.in */; };
+		27A57FE121BA6D04000FED7D /* 4.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FE021BA6D04000FED7D /* 4.in */; };
+		27A57FE321BA6D15000FED7D /* 5.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FE221BA6D15000FED7D /* 5.in */; };
+		27A57FE521BA6D37000FED7D /* 6.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FE421BA6D37000FED7D /* 6.in */; };
+		27A57FE721BA6D41000FED7D /* 7.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FE621BA6D41000FED7D /* 7.in */; };
+		27A57FE921BA6D49000FED7D /* 8.in in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FE821BA6D49000FED7D /* 8.in */; };
+		27A57FEC21BA6D70000FED7D /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FEB21BA6D70000FED7D /* Day1.swift */; };
+		27A57FEE21BA7362000FED7D /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FED21BA7362000FED7D /* Day2.swift */; };
+		27A57FF021BA782B000FED7D /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FEF21BA782B000FED7D /* Day3.swift */; };
+		27A57FF221BA7C7C000FED7D /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF121BA7C7C000FED7D /* Day4.swift */; };
+		27A57FF421BA847C000FED7D /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF321BA847C000FED7D /* Day5.swift */; };
+		27A57FF621BA85C8000FED7D /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF521BA85C8000FED7D /* Day6.swift */; };
+		27A57FF821BA8792000FED7D /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF721BA8792000FED7D /* Day7.swift */; };
+		27A57FFA21BA88CE000FED7D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF921BA88CE000FED7D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +37,22 @@
 		27A57FD021BA6C32000FED7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27A57FD221BA6C32000FED7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A57FD321BA6C32000FED7D /* AdventOfCode2018.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdventOfCode2018.entitlements; sourceTree = "<group>"; };
+		27A57FDA21BA6CD9000FED7D /* 1.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1.in; sourceTree = "<group>"; };
+		27A57FDC21BA6CEB000FED7D /* 2.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2.in; sourceTree = "<group>"; };
+		27A57FDE21BA6CF9000FED7D /* 3.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 3.in; sourceTree = "<group>"; };
+		27A57FE021BA6D04000FED7D /* 4.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 4.in; sourceTree = "<group>"; };
+		27A57FE221BA6D15000FED7D /* 5.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 5.in; sourceTree = "<group>"; };
+		27A57FE421BA6D37000FED7D /* 6.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 6.in; sourceTree = "<group>"; };
+		27A57FE621BA6D41000FED7D /* 7.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 7.in; sourceTree = "<group>"; };
+		27A57FE821BA6D49000FED7D /* 8.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = 8.in; sourceTree = "<group>"; };
+		27A57FEB21BA6D70000FED7D /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		27A57FED21BA7362000FED7D /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
+		27A57FEF21BA782B000FED7D /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		27A57FF121BA7C7C000FED7D /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		27A57FF321BA847C000FED7D /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		27A57FF521BA85C8000FED7D /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
+		27A57FF721BA8792000FED7D /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
+		27A57FF921BA88CE000FED7D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +91,40 @@
 				27A57FCF21BA6C32000FED7D /* Main.storyboard */,
 				27A57FD221BA6C32000FED7D /* Info.plist */,
 				27A57FD321BA6C32000FED7D /* AdventOfCode2018.entitlements */,
+				27A57FF921BA88CE000FED7D /* Extensions.swift */,
+				27A57FEA21BA6D4F000FED7D /* Days */,
+				27A57FD921BA6C40000FED7D /* Inputs */,
 			);
 			path = AdventOfCode2018;
+			sourceTree = "<group>";
+		};
+		27A57FD921BA6C40000FED7D /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				27A57FDA21BA6CD9000FED7D /* 1.in */,
+				27A57FDC21BA6CEB000FED7D /* 2.in */,
+				27A57FDE21BA6CF9000FED7D /* 3.in */,
+				27A57FE021BA6D04000FED7D /* 4.in */,
+				27A57FE221BA6D15000FED7D /* 5.in */,
+				27A57FE421BA6D37000FED7D /* 6.in */,
+				27A57FE621BA6D41000FED7D /* 7.in */,
+				27A57FE821BA6D49000FED7D /* 8.in */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		27A57FEA21BA6D4F000FED7D /* Days */ = {
+			isa = PBXGroup;
+			children = (
+				27A57FEB21BA6D70000FED7D /* Day1.swift */,
+				27A57FED21BA7362000FED7D /* Day2.swift */,
+				27A57FEF21BA782B000FED7D /* Day3.swift */,
+				27A57FF121BA7C7C000FED7D /* Day4.swift */,
+				27A57FF321BA847C000FED7D /* Day5.swift */,
+				27A57FF521BA85C8000FED7D /* Day6.swift */,
+				27A57FF721BA8792000FED7D /* Day7.swift */,
+			);
+			path = Days;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +159,14 @@
 				TargetAttributes = {
 					27A57FC521BA6C31000FED7D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -122,7 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A57FCE21BA6C32000FED7D /* Assets.xcassets in Resources */,
+				27A57FE121BA6D04000FED7D /* 4.in in Resources */,
+				27A57FDB21BA6CD9000FED7D /* 1.in in Resources */,
 				27A57FD121BA6C32000FED7D /* Main.storyboard in Resources */,
+				27A57FDD21BA6CEB000FED7D /* 2.in in Resources */,
+				27A57FDF21BA6CF9000FED7D /* 3.in in Resources */,
+				27A57FE321BA6D15000FED7D /* 5.in in Resources */,
+				27A57FE721BA6D41000FED7D /* 7.in in Resources */,
+				27A57FE521BA6D37000FED7D /* 6.in in Resources */,
+				27A57FE921BA6D49000FED7D /* 8.in in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +214,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A57FCC21BA6C31000FED7D /* ViewController.swift in Sources */,
+				27A57FF621BA85C8000FED7D /* Day6.swift in Sources */,
+				27A57FF421BA847C000FED7D /* Day5.swift in Sources */,
+				27A57FF221BA7C7C000FED7D /* Day4.swift in Sources */,
+				27A57FF021BA782B000FED7D /* Day3.swift in Sources */,
+				27A57FFA21BA88CE000FED7D /* Extensions.swift in Sources */,
+				27A57FEE21BA7362000FED7D /* Day2.swift in Sources */,
+				27A57FEC21BA6D70000FED7D /* Day1.swift in Sources */,
+				27A57FF821BA8792000FED7D /* Day7.swift in Sources */,
 				27A57FCA21BA6C31000FED7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AdventOfCode2018/AdventOfCode2018.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X34UB4R785;
@@ -282,6 +370,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.minglebit.AdventOfCode2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -290,7 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AdventOfCode2018/AdventOfCode2018.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X34UB4R785;
@@ -301,6 +390,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.minglebit.AdventOfCode2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
