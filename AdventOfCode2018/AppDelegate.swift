@@ -17,13 +17,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         printRuntimes = true
         
-        Day1().showSolutions()
-        Day2().showSolutions()
-        Day3().showSolutions()
-        Day4().showSolutions()
-        Day5().showSolutions()
-        Day6().showSolutions()
-        Day7().showSolutions()
+//        Day1().showSolutions()
+//        Day2().showSolutions()
+//        Day3().showSolutions()
+//        Day4().showSolutions()
+//        Day5().showSolutions()
+//        Day6().showSolutions()
+//        Day7().showSolutions()
+//        Day8().showSolutions()
+        Day9().showSolutions()
+
 
     }
 

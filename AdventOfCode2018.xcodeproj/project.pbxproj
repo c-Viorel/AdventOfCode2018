@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2761B83621BA92DA008C3C79 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2761B83421BA92DA008C3C79 /* README.md */; };
-		2761B83721BA92DA008C3C79 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2761B83521BA92DA008C3C79 /* LICENSE */; };
 		27A57FCA21BA6C31000FED7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FC921BA6C31000FED7D /* AppDelegate.swift */; };
 		27A57FCC21BA6C31000FED7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FCB21BA6C31000FED7D /* ViewController.swift */; };
 		27A57FCE21BA6C32000FED7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A57FCD21BA6C32000FED7D /* Assets.xcassets */; };
@@ -29,11 +27,11 @@
 		27A57FF621BA85C8000FED7D /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF521BA85C8000FED7D /* Day6.swift */; };
 		27A57FF821BA8792000FED7D /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF721BA8792000FED7D /* Day7.swift */; };
 		27A57FFA21BA88CE000FED7D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57FF921BA88CE000FED7D /* Extensions.swift */; };
+		27A8D43B21BCD84600795765 /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D43A21BCD84600795765 /* Day9.swift */; };
+		27E32D5121BB8EA9002B3E0D /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E32D5021BB8EA9002B3E0D /* Day8.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2761B83421BA92DA008C3C79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2761B83521BA92DA008C3C79 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		27A57FC621BA6C31000FED7D /* AdventOfCode2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A57FC921BA6C31000FED7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A57FCB21BA6C31000FED7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +55,8 @@
 		27A57FF521BA85C8000FED7D /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		27A57FF721BA8792000FED7D /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		27A57FF921BA88CE000FED7D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		27A8D43A21BCD84600795765 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
+		27E32D5021BB8EA9002B3E0D /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,6 @@
 				27A57FCF21BA6C32000FED7D /* Main.storyboard */,
 				27A57FD221BA6C32000FED7D /* Info.plist */,
 				27A57FD321BA6C32000FED7D /* AdventOfCode2018.entitlements */,
-				2761B83521BA92DA008C3C79 /* LICENSE */,
-				2761B83421BA92DA008C3C79 /* README.md */,
 				27A57FF921BA88CE000FED7D /* Extensions.swift */,
 				27A57FEA21BA6D4F000FED7D /* Days */,
 				27A57FD921BA6C40000FED7D /* Inputs */,
@@ -129,6 +127,8 @@
 				27A57FF321BA847C000FED7D /* Day5.swift */,
 				27A57FF521BA85C8000FED7D /* Day6.swift */,
 				27A57FF721BA8792000FED7D /* Day7.swift */,
+				27E32D5021BB8EA9002B3E0D /* Day8.swift */,
+				27A8D43A21BCD84600795765 /* Day9.swift */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -205,11 +205,9 @@
 				27A57FD121BA6C32000FED7D /* Main.storyboard in Resources */,
 				27A57FDD21BA6CEB000FED7D /* 2.in in Resources */,
 				27A57FDF21BA6CF9000FED7D /* 3.in in Resources */,
-				2761B83721BA92DA008C3C79 /* LICENSE in Resources */,
 				27A57FE321BA6D15000FED7D /* 5.in in Resources */,
 				27A57FE721BA6D41000FED7D /* 7.in in Resources */,
 				27A57FE521BA6D37000FED7D /* 6.in in Resources */,
-				2761B83621BA92DA008C3C79 /* README.md in Resources */,
 				27A57FE921BA6D49000FED7D /* 8.in in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +223,9 @@
 				27A57FF621BA85C8000FED7D /* Day6.swift in Sources */,
 				27A57FF421BA847C000FED7D /* Day5.swift in Sources */,
 				27A57FF221BA7C7C000FED7D /* Day4.swift in Sources */,
+				27A8D43B21BCD84600795765 /* Day9.swift in Sources */,
 				27A57FF021BA782B000FED7D /* Day3.swift in Sources */,
+				27E32D5121BB8EA9002B3E0D /* Day8.swift in Sources */,
 				27A57FFA21BA88CE000FED7D /* Extensions.swift in Sources */,
 				27A57FEE21BA7362000FED7D /* Day2.swift in Sources */,
 				27A57FEC21BA6D70000FED7D /* Day1.swift in Sources */,

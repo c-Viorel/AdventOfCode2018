@@ -29,11 +29,7 @@ class Day1 {
     
     
     func a(_ dataIn:[Int]) -> Int {
-//        var s = 0
-//        for number in dataIn {
-//            s += number
-//        }
-//        return s
+
         return dataIn.reduce(0, +)
     }
     
