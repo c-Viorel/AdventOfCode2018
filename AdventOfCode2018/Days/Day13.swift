@@ -141,8 +141,8 @@ class Day13 {
     func aAndB(_ track: [[Track]], _ carts: [Cart]) {
         var carts = carts
         var positions = Dictionary(uniqueKeysWithValues: carts.lazy.map({ ($0.coord, $0) }) )
-        outerWhile: while true {
-            carts.sort(by: { $0.coord.y != $1.coord.y ? $0.coord.x < $1.coord.x : $0.coord.x < $1.coord.x })
+        while carts.count > 1 {
+            carts.sort(by: { $0.coord.y != $1.coord.y ? $0.coord.y < $1.coord.y : $0.coord.x < $1.coord.x })
             for index in carts.indices {
                 guard !carts[index].removed else { continue }
                 let trackPiece = track[carts[index].coord.y][carts[index].coord.x]
@@ -162,9 +162,9 @@ class Day13 {
                     positions[carts[index].coord] = carts[index]
                 }
             }
-            if carts.lazy.filter({ !$0.removed }).count == 1 {
-                print(carts.lazy.filter({ !$0.removed }).first!)
-                break
+            carts.removeAll(where: { $0.removed })
+            if carts.count == 1 {
+                print(carts.first!)
             }
         }
     }
