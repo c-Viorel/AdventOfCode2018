@@ -53,12 +53,6 @@ class Day9 {
             }
         }
 
-//        while cirulatList.next != nil {
-//            let prev = cirulatList
-//            cirulatList    = cirulatList.next
-//            prev.next = nil
-//        }
-        
         return scores.max() ?? -1
     }
     

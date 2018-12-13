@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
         printRuntimes = true
-        
+//
 //        Day1().showSolutions()
 //        Day2().showSolutions()
 //        Day3().showSolutions()
@@ -25,8 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Day6().showSolutions()
 //        Day7().showSolutions()
 //        Day8().showSolutions()
-        Day9().showSolutions()
-
+//        Day9().showSolutions(numberOfPlayers: 419, highestScore: 72164)
+//        Day10().showSolutions()
+//          Day11().showSolutions()
+//         Day12().showSolutions()
+        Day13().showSolutions()
 
     }
 
