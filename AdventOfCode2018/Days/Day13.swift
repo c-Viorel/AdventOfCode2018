@@ -12,7 +12,7 @@ class Day13 {
     let input:String = "13"
     
     func showSolutions() {
-        let resourceURL = Bundle.main.url(forResource: input, withExtension: "in")!
+        let resourceURL = Bundle.main.url(forResource: input, withExtension: "txt")!
 
         let str = try! String(contentsOf: resourceURL)
         
@@ -21,7 +21,7 @@ class Day13 {
         let track = str.split(separator: "\n").enumerated().map { y, line in
             return line.enumerated().map { x, char -> Track in
                 if let dir = Direction(rawValue: char) {
-                    carts.append(Cart(coord: Point(x: x, y: y), facing: dir, nextTurn: .left, removed: false))
+                    carts.append(Cart(coord: Point(x: x, y: y), facing: dir))
                     return dir == .left || dir == .right ? .horizontal : .vertical
                 }
                 return Track(rawValue: char)!
@@ -99,7 +99,7 @@ class Day13 {
                 case .right: return .down
                 case .left: return .up
                 }
-            default: fatalError("Nu ar trebui sa fi pe o cale de tip \(self)")
+            case .intersection, .none: fatalError("Shouldn't use go on track of type \(self)")
             }
         }
     }
@@ -115,80 +115,72 @@ class Day13 {
         }
     }
     
-    struct Cart {
-        var coord: Point
-        
-        var facing: Direction
-        var nextTurn: Turn = .left
-        var removed: Bool = false
-        
-        mutating func go(on track: Track) {
-            if case .intersection = track {
-                facing = nextTurn.apply(to: facing)
-                switch nextTurn {
-                case .left: nextTurn = .straight
-                case .straight: nextTurn = .right
-                case .right: nextTurn = .left
-                }
-            }
-            else {
-                facing = track.go(from: facing)
-            }
-            coord = coord + facing.coords
-        }
-    }
-    
+ 
+
     func aAndB(_ track: [[Track]], _ carts: [Cart]) {
         var carts = carts
         var positions = Dictionary(uniqueKeysWithValues: carts.lazy.map({ ($0.coord, $0) }) )
         while carts.count > 1 {
             carts.sort(by: { $0.coord.y != $1.coord.y ? $0.coord.y < $1.coord.y : $0.coord.x < $1.coord.x })
-            for index in carts.indices {
-                guard !carts[index].removed else { continue }
-                let trackPiece = track[carts[index].coord.y][carts[index].coord.x]
-                positions[carts[index].coord] = nil
-                carts[index].go(on: trackPiece)
-                if positions[carts[index].coord] != nil {
-                    let crash = carts[index].coord
-                    print(crash)
-                    for index in carts.indices {
-                        if carts[index].coord == crash {
-                            carts[index].removed = true
-                        }
-                    }
-                    positions[crash] = nil
+            for cart in carts {
+                guard !cart.removed else { continue }
+                let trackPiece = track[cart.coord.y][cart.coord.x]
+                positions[cart.coord] = nil
+                cart.go(on: trackPiece)
+                
+                if let other = positions[cart.coord] {
+                    positions[cart.coord] = nil
+                    print(cart.coord)
+                    cart.removed = true
+                    other.removed = true
                 }
                 else {
-                    positions[carts[index].coord] = carts[index]
+                    positions[cart.coord] = cart
                 }
             }
             carts.removeAll(where: { $0.removed })
             if carts.count == 1 {
-                print(carts.first!)
+                print(carts[0])
             }
         }
     }
 
     
-    func getData() -> String{
-        var numbers:String = ""
-        let resourceURL = Bundle.main.url(forResource: input, withExtension: "in")
-        if let url = resourceURL {
-            do {
-                let inputString = try String(contentsOf: url, encoding: .utf8)
-                numbers = inputString
-            } catch {
-                print("Error at reading input file")
-            }
-        }
-        return numbers
-    }
     
     
 }
 
 
-
+class Cart: CustomStringConvertible {
+    var coord: Day13.Point
+    
+    var facing: Day13.Direction
+    var nextTurn: Day13.Turn = .left
+    var removed: Bool = false
+    
+    func go(on track: Day13.Track) {
+        if case .intersection = track {
+            facing = nextTurn.apply(to: facing)
+            switch nextTurn {
+            case .left: nextTurn = .straight
+            case .straight: nextTurn = .right
+            case .right: nextTurn = .left
+            }
+        }
+        else {
+            facing = track.go(from: facing)
+        }
+        coord = coord + facing.coords
+    }
+    
+    init(coord: Day13.Point, facing: Day13.Direction) {
+        (self.coord, self.facing) = (coord, facing)
+    }
+    
+    var description: String {
+        return "Cart(coord: \(coord), facing: \(facing), nextTurn: \(nextTurn), removed: \(removed))"
+    }
+}
 
 
 

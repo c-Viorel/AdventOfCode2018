@@ -27,9 +27,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Day8().showSolutions()
 //        Day9().showSolutions(numberOfPlayers: 419, highestScore: 72164)
 //        Day10().showSolutions()
-//          Day11().showSolutions()
-//         Day12().showSolutions()
-        Day13().showSolutions()
+//        Day11().showSolutions()
+//        Day12().showSolutions()
+//        Day13().showSolutions()
+//        Day14().showSolutions()
+//        Day15().showSolutions()
+        Day16().showSolutions()
 
     }
 
@@ -37,6 +40,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    
 }
 
