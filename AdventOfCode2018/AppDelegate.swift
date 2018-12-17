@@ -32,7 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Day13().showSolutions()
 //        Day14().showSolutions()
 //        Day15().showSolutions()
-        Day16().showSolutions()
+//        Day16().showSolutions()
+        Day17().showSolutions()
 
     }
 
