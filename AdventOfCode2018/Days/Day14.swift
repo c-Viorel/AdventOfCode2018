@@ -11,7 +11,7 @@ class Day14 {
     
     let input:String = "14"
     
-    func showSolutions(inputValue: Int = 290431 ) {
+    func showSolutions(inputValue: Int = 330121 ) {
         let date1 = Date()
         print("─────────────────────────────────────────")
         print("Day \(input):")

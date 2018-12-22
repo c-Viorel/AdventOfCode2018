@@ -13,7 +13,7 @@ class Day9 {
     let input:String = "9"
     
     //412 players; last marble is worth 71646 points
-    func showSolutions(numberOfPlayers:Int = 441, highestScore:Int = 71032) {
+    func showSolutions(numberOfPlayers:Int = 458, highestScore:Int = 72019) {
         let date1 = Date()
         print("─────────────────────────────────────────")
         print("Day \(input):")

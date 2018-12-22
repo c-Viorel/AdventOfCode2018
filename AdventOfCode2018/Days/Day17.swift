@@ -26,19 +26,19 @@ class Day17 {
         print("Day \(inputFileName):")
         
         
-        let input = str.components(separatedBy: "\n").compactMap { block -> LinesInfo? in
+        let input = str.components(separatedBy: "\n").compactMap { block -> WallsInfo? in
             let numbers = block.split(whereSeparator: { !"0123456789".contains($0) }).lazy.map { Int($0)!}
             guard  numbers.count == 3 else {
                 return nil
             }
             if block.first! == "y" {
-                return LinesInfo.init(x: ClosedRange.init(uncheckedBounds: (lower: numbers[1], upper: numbers[2])), y: ClosedRange.init(uncheckedBounds: (lower: numbers[0], upper: numbers[0])))
+                return WallsInfo.init(x: ClosedRange.init(uncheckedBounds: (lower: numbers[1], upper: numbers[2])), y: ClosedRange.init(uncheckedBounds: (lower: numbers[0], upper: numbers[0])))
 
             } else {
-                return LinesInfo.init(x: ClosedRange.init(uncheckedBounds: (lower: numbers[0], upper: numbers[0])), y: ClosedRange.init(uncheckedBounds: (lower: numbers[1], upper: numbers[2])))
+                return WallsInfo.init(x: ClosedRange.init(uncheckedBounds: (lower: numbers[0], upper: numbers[0])), y: ClosedRange.init(uncheckedBounds: (lower: numbers[1], upper: numbers[2])))
             }
         }
-   
+
         //
         aAndB(input)
 //        b(input)
@@ -66,7 +66,7 @@ class Day17 {
         }
     }
     
-    func aAndB(_ input: [LinesInfo]) {
+    func aAndB(_ input: [WallsInfo]) {
         let minX = input.lazy.map { $0.x.lowerBound }.min()! - 1
         let maxX = input.lazy.map { $0.x.upperBound }.max()! + 1
         let minY = input.lazy.map { $0.y.lowerBound }.min()!
@@ -138,7 +138,11 @@ class Day17 {
             return spilled
         }
         _ = pourDown(x: 500, y: minY)
+        let s = map.lazy.map({ String($0.lazy.map { $0.char }) }).joined(separator: "\n")
+        ///Write the map on a txt file on your desktop.
+        try? s.write(to: getOut(), atomically: false, encoding: String.Encoding.utf8)
         
+        /// for some inputs,get at part 1 you should add manually 1 to final result. Dont't ask :)))
         print("\tA: \(map.lazy.flatMap({ $0 }).filter({ $0.isWater }).count)")
         print("\tB: \(map.lazy.flatMap({ $0 }).filter({ $0 == .water }).count)")
     }
@@ -159,13 +163,23 @@ class Day17 {
         return data
     }
     
+    
+    func getOut() -> URL {
+        if let dir = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first {
+            return dir.appendingPathComponent("out.txt")
+        }
 
-    struct LinesInfo {
-        var x:ClosedRange<Int> = ClosedRange.init(uncheckedBounds: (lower: 0, upper: 0))
-        var y:ClosedRange<Int> =  ClosedRange.init(uncheckedBounds: (lower: 0, upper: 0))
-        
+        return URL.init(string: "nil")!
     }
     
+
+    
+    struct WallsInfo {
+        var x:ClosedRange<Int> =  ClosedRange.init(uncheckedBounds: (lower: 0, upper: 0))
+        var y:ClosedRange<Int> =  ClosedRange.init(uncheckedBounds: (lower: 0, upper: 0))
+    }
+    
+
 }
 
 

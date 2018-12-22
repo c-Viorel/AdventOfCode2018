@@ -15,8 +15,6 @@ class Day16 {
         let date1 = Date()
         print("─────────────────────────────────────────")
         print("Day \(inputFileName):")
-        
-        
         let input = str.components(separatedBy: "\n\n").compactMap { block -> (from: [Int], instr: Instruction, to: [Int])? in
             let numbers = block.split(whereSeparator: { !"0123456789".contains($0) }).lazy.map { Int($0)! }
             guard numbers.count == 12 else { return nil }
@@ -45,7 +43,6 @@ class Day16 {
         
         case addr, addi, mulr, muli, banr, bani, borr, bori, setr, seti, gtir, gtri, gtrr, eqir, eqri, eqrr
         
-    
         func exec(instr: Instruction, input: [Int]) -> [Int] {
             var output = input
             switch self {

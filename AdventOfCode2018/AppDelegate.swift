@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Day6().showSolutions()
 //        Day7().showSolutions()
 //        Day8().showSolutions()
-//        Day9().showSolutions(numberOfPlayers: 419, highestScore: 72164)
+//        Day9().showSolutions()
 //        Day10().showSolutions()
 //        Day11().showSolutions()
 //        Day12().showSolutions()
@@ -33,8 +33,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Day14().showSolutions()
 //        Day15().showSolutions()
 //        Day16().showSolutions()
-        Day17().showSolutions()
+//        Day17().showSolutions()
+//        Day18().showSolutions()
+//        Day19().showSolutions()
+//        Day20().showSolutions()
+//       Day21().showSolutions()
+        Day22().showSolutions()
 
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
