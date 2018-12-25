@@ -39,19 +39,13 @@ class Day23 {
     }
     
     
-    struct Point: Hashable, Comparable {
+    struct Point: Hashable {
         var x: Int
         var y: Int
         var z:Int
         
- 
-        static func <(lhs: Point, rhs: Point) -> Bool {
-            return lhs.y != rhs.y ? lhs.y < rhs.y : lhs.x < rhs.x
-        }
-        
-
-         func distanceTo(p:Point) -> Int {
-            return abs((self.x - p.x) ) + abs((self.y - p.y) ) + abs((self.z - p.z) )
+         func distanceTo(p:Point) -> UInt {
+            return (self.x - p.x).magnitude + (self.y - p.y).magnitude + (self.z - p.z).magnitude
         }
     }
     

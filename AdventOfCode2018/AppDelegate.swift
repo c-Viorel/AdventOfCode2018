@@ -37,10 +37,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Day18().showSolutions()
 //        Day19().showSolutions()
 //        Day20().showSolutions()
-//       Day21().showSolutions()
+//        Day21().showSolutions()
 //        Day22().showSolutions()
+//        Day23().showSolutions()
+//        Day24().showSolutions()
+        Day25().showSolutions()
 
-         Day23().showSolutions()
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -55,7 +55,7 @@ class Day19 {
             computer.exec(instruction)
             computer.instructionRegister += 1
             if computer.instructionRegister == 1 {
-                target = computer.registers[5] ///forr different inputs, change this register index.
+                target = computer.registers[4] ///forr different inputs, change this register index.
                 break
             }
         }
