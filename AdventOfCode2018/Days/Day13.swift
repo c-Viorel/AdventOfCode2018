@@ -120,7 +120,8 @@ class Day13 {
     func aAndB(_ track: [[Track]], _ carts: [Cart]) {
         var carts = carts
         var positions = Dictionary(uniqueKeysWithValues: carts.lazy.map({ ($0.coord, $0) }) )
-        while carts.count > 1 {
+        var foundedA:Bool = false
+         while carts.count > 1 {
             carts.sort(by: { $0.coord.y != $1.coord.y ? $0.coord.y < $1.coord.y : $0.coord.x < $1.coord.x })
             for cart in carts {
                 guard !cart.removed else { continue }
@@ -130,7 +131,10 @@ class Day13 {
                 
                 if let other = positions[cart.coord] {
                     positions[cart.coord] = nil
-                    print(cart.coord)
+                    if !foundedA {
+                        print("\tA: \(cart.coord.x),\(cart.coord.y)")
+                        foundedA = true
+                    }
                     cart.removed = true
                     other.removed = true
                 }
@@ -140,7 +144,7 @@ class Day13 {
             }
             carts.removeAll(where: { $0.removed })
             if carts.count == 1 {
-                print(carts[0])
+                print("\tB: \(carts[0].coord.x),\(carts[0].coord.y)")
             }
         }
     }

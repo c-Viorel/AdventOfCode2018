@@ -71,7 +71,7 @@ class Day25 {
             constellations.append(Array(working))
         }
         
-        print(constellations.count)
+        print("\tA: \(constellations.count)")
 
     }
     

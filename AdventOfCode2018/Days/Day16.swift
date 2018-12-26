@@ -80,9 +80,11 @@ class Day16 {
     }
     
     func a(_ input: [(from: [Int], instr: Instruction, to: [Int])]) {
-        print(input.lazy.map { (from, instr, to) in
+        let result = input.lazy.map { (from, instr, to) in
             Opcode.allCases.lazy.filter { $0.exec(instr: instr, input: from) == to }.count
-            }.filter({ $0 >= 3 }).count)
+            }.filter({ $0 >= 3 }).count
+        
+        print("\tA: \(result)")
     }
     
     
@@ -110,7 +112,8 @@ class Day16 {
         for instruction in program {
             arr = mappings[instruction.opcode].exec(instr: instruction, input: arr)
         }
-        print(arr)
+        
+        print("\tB: \(arr[0])")
     }
  
     

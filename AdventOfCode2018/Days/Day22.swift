@@ -16,7 +16,7 @@ class Day22 {
         print("─────────────────────────────────────────")
         print("Day \(inputFileName):")
         
-        aAndB(depth: 510, target: Point22(x: 10, y: 10))
+//        aAndB(depth: 510, target: Point22(x: 10, y: 10))
         aAndB(depth: 11739, target: Point22(x: 718, y: 11))
         if printRuntimes {
             let run = Date().timeIntervalSince(date1)
@@ -50,7 +50,7 @@ class Day22 {
         }
             //Print the map 
             //print(cave.convertedDescription({ $0.char }))
-        print(cave.storage.lazy.map({ $0.rawValue }).reduce(0, +))
+        print("\tA: \(cave.storage.lazy.map({ $0.rawValue }).reduce(0, +))")
         let bigNumber = Int.max - Int(Int16.max)
         let grid = Grid22(repeating: bigNumber, x: cave.xRange, y: cave.yRange)
         var fastest = [grid, grid, grid]
@@ -93,7 +93,8 @@ class Day22 {
                 }
             }
         } while lastFastest != fastest
-        print(fastest[Tool22.torch.rawValue][target])
+        print("\tA: \(fastest[Tool22.torch.rawValue][target])")
+
     }
 }
 /// I've choose to change the name of some helper classes/structs to eliinate conflicts with

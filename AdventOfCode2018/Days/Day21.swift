@@ -57,12 +57,10 @@ class Day21 {
         }
         
         for i in 1...999999 {
-            print(i)
             test(register: i)
         }
     
     }
-    // My code summed factors of the number in R4, may not be the case for others?
     func b(_ input: [Instruction], ip: Int) {
         let computer = Computer(ipBinding: ip)
         var target = 0

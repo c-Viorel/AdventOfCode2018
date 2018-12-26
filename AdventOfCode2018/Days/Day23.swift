@@ -25,6 +25,7 @@ class Day23 {
         }
         
         a(bots)
+        b(bots, searchSize: 32)
         
         if printRuntimes {
             let run = Date().timeIntervalSince(date1)
@@ -64,6 +65,47 @@ class Day23 {
         print( "\tA: \(count)")
     }
     
+    func b(_ input: [Nanobot], searchSize:Int) {
+        // Will search searchSize^3 points each round
+        // Bigger numbers are more likely to find the solution but are slower
+        let xRange = input.lazy.map({ $0.position.x }).minmax()!
+        let yRange = input.lazy.map({ $0.position.y }).minmax()!
+        let zRange = input.lazy.map({ $0.position.z }).minmax()!
+        
+        let largestRange = max(xRange.count, max(yRange.count, zRange.count))
+        let center = Point(x: 0, y: 0, z: 0)
+        var best = center
+        var bestScore = 0
+        
+        for stepPower in (0...32).reversed() {
+            let step = 1 << stepPower
+            let offset = (step * searchSize) / 2
+            guard offset < largestRange else { continue }
+            // Shift points around slightly to raise chances of finding new minimums
+            let negOffset = step / 2 - offset
+            let posOffset = step / 2 + offset
+            let xSearch = stride(from: best.x + negOffset, to: best.x + posOffset, by: step)
+            let ySearch = stride(from: best.y + negOffset, to: best.y + posOffset, by: step)
+            let zSearch = stride(from: best.z + negOffset, to: best.z + posOffset, by: step)
+            for x in xSearch {
+                for y in ySearch {
+                    for z in zSearch {
+                        let point = Point(x: x, y: y, z: z)
+                        let score = input.lazy.filter({ $0.position.distanceTo( p: point) <= $0.radius }).count
+                        if score > bestScore {
+                            best = point
+                            bestScore = score
+                        }
+                        else if score == bestScore && best.distanceTo( p: center) > point.distanceTo(p: center) {
+                            best = point
+                        }
+                    }
+                }
+            }
+        }
+        print("\tB: \(best.distanceTo( p: center))")
+
+    }
     
     
     func getData() -> String {
@@ -82,3 +124,4 @@ class Day23 {
     
     
 }
+

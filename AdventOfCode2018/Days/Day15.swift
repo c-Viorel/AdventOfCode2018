@@ -29,8 +29,7 @@ class Day15 {
         
         for power in 3...200 {
             let newBeings = beings.map({ Being(race: $0.race, at: $0.coord, attack: $0.race == .goblin ? 3 : power) })
-            print("Power: \(power)")
-            if aAndB(dataIn, beings: newBeings, printFields: false) {
+            if aAndB(dataIn, beings: newBeings, printFields: false, power:power) {
                 break
             }
         }
@@ -112,8 +111,8 @@ class Day15 {
     }
     
     
-    func aAndB(_ input: [[Space]], beings: [Being], printFields: Bool) -> Bool {
-        var input = input
+    func aAndB(_ input: [[Space]], beings: [Being], printFields: Bool, power:Int) -> Bool {
+        var input  = input
         var beings = beings
         
         if printFields { print(fieldString(input)) }
@@ -167,9 +166,12 @@ class Day15 {
             rounds += 1
         }
         let remainingHealth = beings.map({ $0.hitpoints }).filter({ $0 > 0 }).reduce(0, +)
-        print("\(rounds) rounds, \(remainingHealth) health, \(rounds * remainingHealth)")
+        if power == 3 {
+            print("\tA: \(rounds * remainingHealth)")
+
+        }
         if beings.lazy.filter({ $0.race == .elf && $0.hitpoints <= 0 }).isEmpty {
-            print("No dead elves")
+            print("\tB: \(rounds * remainingHealth)")
             return true
         }
         return false

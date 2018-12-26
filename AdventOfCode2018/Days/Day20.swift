@@ -22,8 +22,8 @@ class Day20 {
        
         let substr = str.dropFirst().dropLast().dropLast()
         let grid = parse(substr)
-        print(grid.convertedDescription({ $0.rawValue }))
-        aocD20(grid)
+//        print(grid.convertedDescription({ $0.rawValue }))
+        aAndB(grid)
         
         if printRuntimes {
             let run = Date().timeIntervalSince(date1)
@@ -86,7 +86,7 @@ class Day20 {
         return grid
     }
     
-    func aocD20(_ grid: Grid20<Spot>) {
+    func aAndB(_ grid: Grid20<Spot>) {
         let startingPos = Point(x: 0, y: 0)
         var distance = 0
         var distances = [startingPos: 0]
@@ -107,8 +107,9 @@ class Day20 {
             }
             last = new
         }
-        print(distance - 1)
-        print(distances.filter({ $0.value >= 1000 }).count)
+        print("\tA: \(distance - 1)")
+        print("\tA: \(distances.filter({ $0.value >= 1000 }).count)")
+
     }
 
     

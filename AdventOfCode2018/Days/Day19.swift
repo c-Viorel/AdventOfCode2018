@@ -24,8 +24,8 @@ class Day19 {
         let input = split.compactMap { line in
             return Instruction(line.split(separator: " "))
         }
-        a(input, ip: binding)
-        a(input, ip: binding)
+        print( "\tA: \(a(input, ip: binding))")
+        print( "\tB: \(b(input, ip: binding))")
         
         if printRuntimes {
             let run = Date().timeIntervalSince(date1)
@@ -33,7 +33,7 @@ class Day19 {
         }
     }
 
-    func a(_ input: [Instruction], ip: Int) {
+    func a(_ input: [Instruction], ip: Int) -> Int {
         let computer = Computer(ipBinding: ip)
         while input.indices.contains(computer.instructionRegister) {
             let ip = computer.instructionRegister
@@ -42,10 +42,11 @@ class Day19 {
             computer.instructionRegister += 1
         }
         computer.instructionRegister -= 1
-        print(computer.registers)
-    }
-    // My code summed factors of the number in R4, may not be the case for others?
-    func aocD19b(_ input: [Instruction], ip: Int) {
+        return computer.registers[0]
+        }
+
+
+    func b(_ input: [Instruction], ip: Int) -> Int{
         let computer = Computer(ipBinding: ip)
         var target = 0
         computer.registers[0] = 1
@@ -55,7 +56,7 @@ class Day19 {
             computer.exec(instruction)
             computer.instructionRegister += 1
             if computer.instructionRegister == 1 {
-                target = computer.registers[4] ///forr different inputs, change this register index.
+                target = computer.registers[2] ///for different inputs, try to change this register index. [0-6]
                 break
             }
         }
@@ -78,7 +79,7 @@ class Day19 {
                 }
             }
         }
-        print(total)
+        return total
     }
    
     
